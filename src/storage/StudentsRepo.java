@@ -4,18 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StudentsRepo {
-    public static void main(String[]args){
-        Map<String,String> students=new HashMap<>();
-        students.put("alvin","reg_no3452");
-        students.put("amos","reg_no3452");
-        students.put("anton","reg_no3452");
-        students.put("sasha","reg_no3452");
-        for(Map.Entry<String ,String> entry:students.entrySet()){
-            String name =entry.getKey();
-            String reg_no=entry.getValue();
-            System.out.println("Name: "+name);
-            System.out.println("Registration number: " +reg_no);
-        }
+    //a map for storing student information.
+    Map<String,String> students= new HashMap<>();
+
+    //a method to add a new student which we call in the main method in the main class.
+    public void addStudents(String name,String reg_no){
+        this.students.put(name,reg_no);
     }
 
+    //a method to display the students in the university.
+    public void displayStudents(){
+        System.out.println(students);
+    }
 }
