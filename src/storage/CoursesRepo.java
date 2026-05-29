@@ -1,12 +1,19 @@
 package storage;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CoursesRepo {
-    public static void main(String[]args){
-        //An array list to store the list of courses.
-        ArrayList<String> courses=new ArrayList<String>();
+    //a map to hold courses with their code.
+    Map<String,String> courses=new HashMap<>();
+
+    //a method to add new courses.
+    public void addCourse(String code,String name){
+        this.courses.put(code,name);
+    }
+    //a method to display the courses available.
+    public void PrintCourses(){
         System.out.println(courses);
     }
-
 }

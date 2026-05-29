@@ -8,8 +8,7 @@ public class StudentsRepo {
     Map<String,String> students= new HashMap<>();
 
     //a method to add a new student which we call in the main method in the main class.
-    public void addStudents(String name,String reg_no){
-        this.students.put(name,reg_no);
+    public void addStudents(String name,String reg_no){this.students.put(name,reg_no);
     }
 
     //a method to display the students in the university.
