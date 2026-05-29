@@ -31,7 +31,8 @@ public class Admin {
         }else if (operation==3){
             System.out.println("Editing a course coming soon");
         }else if (operation==4){
-            System.out.println("Deleting a student coming soon");
+            StudentsRepo deleteStudent=new StudentsRepo();
+            deleteStudent.deleteStudent();
         }else if (operation==5){
             System.out.println("Assigning a lecturer to a course coming soon");
         }else if (operation==6){
