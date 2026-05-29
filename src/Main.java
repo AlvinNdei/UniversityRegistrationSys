@@ -16,7 +16,15 @@ public class Main {
         if (choice==1){
             System.out.println("Redirect to the student dashboard");
         }else if(choice==2){
-            System.out.println("Redirect to admin panel");
+            System.out.println("Enter the password");
+            String password=login.next();
+            String PASSWORD="alvin0325";
+            if(password.equals(PASSWORD)){
+                System.out.println("Redirect to admin panel");
+            }else{
+                System.out.println("WRONG PASSWORD!!");
+            }
+
         }else{
             System.out.println("Invalid choice");
         }
