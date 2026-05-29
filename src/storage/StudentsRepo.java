@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class StudentsRepo {
     public static final Map<String,String> students=new HashMap<>();
 
+    //we have to use static to populate our map.
     static{
         students.put("001","Janice");
         students.put("002","Ashley");
