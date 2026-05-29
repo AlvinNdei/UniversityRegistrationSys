@@ -43,8 +43,8 @@ public class Main {
 
         //method for adding courses and displaying courses.
         CoursesRepo new_course=new CoursesRepo();
-        new_course.addCourse("CS203","Number Theory");
-        new_course.addCourse("CS201","Computer Graphics");
+        new_course.addCourse("CS209","Number Theory");
+        new_course.addCourse("CS200","Computer Graphics");
         new_course.PrintCourses();
     }
 }
