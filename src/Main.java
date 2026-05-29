@@ -24,8 +24,8 @@ public class Main {
             String password=login.next();
             String PASSWORD="alvin0325";
             if(password.equals(PASSWORD)){
-                Admin new_student=new Admin();
-                new_student.addStudent();
+                Admin showPanel=new Admin();
+                showPanel.adminPanel();
             }else{
                 System.out.println("WRONG PASSWORD!!");
             }
@@ -33,15 +33,7 @@ public class Main {
         }else{
             System.out.println("Invalid choice");
         }
-        //An object for adding new students.
-//        StudentsRepo new_students = new StudentsRepo();
-//        Scanner scanner=new Scanner(System.in);
-//        System.out.println("Input your name: ");
-//        String name=scanner.next();
-//        System.out.println("Input your registration number: ");
-//        String reg_no=scanner.next();
-//        new_students.addStudents(name,reg_no);
-//        new_students.displayStudents();
+
 
         //method for adding courses and displaying courses.
 //        CoursesRepo new_course=new CoursesRepo();
