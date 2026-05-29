@@ -1,3 +1,4 @@
+import models.Admin;
 import models.Student;
 import storage.CoursesRepo;
 import storage.StudentsRepo;
@@ -23,7 +24,8 @@ public class Main {
             String password=login.next();
             String PASSWORD="alvin0325";
             if(password.equals(PASSWORD)){
-                System.out.println("Redirect to admin panel");
+                Admin new_student=new Admin();
+                new_student.addStudent();
             }else{
                 System.out.println("WRONG PASSWORD!!");
             }
@@ -32,19 +34,19 @@ public class Main {
             System.out.println("Invalid choice");
         }
         //An object for adding new students.
-        StudentsRepo new_students = new StudentsRepo();
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Input your name: ");
-        String name=scanner.next();
-        System.out.println("Input your registration number: ");
-        String reg_no=scanner.next();
-        new_students.addStudents(name,reg_no);
-        new_students.displayStudents();
+//        StudentsRepo new_students = new StudentsRepo();
+//        Scanner scanner=new Scanner(System.in);
+//        System.out.println("Input your name: ");
+//        String name=scanner.next();
+//        System.out.println("Input your registration number: ");
+//        String reg_no=scanner.next();
+//        new_students.addStudents(name,reg_no);
+//        new_students.displayStudents();
 
         //method for adding courses and displaying courses.
-        CoursesRepo new_course=new CoursesRepo();
-        new_course.addCourse("CS209","Number Theory");
-        new_course.addCourse("CS200","Computer Graphics");
-        new_course.PrintCourses();
+//        CoursesRepo new_course=new CoursesRepo();
+//        new_course.addCourse("CS209","Number Theory");
+//        new_course.addCourse("CS200","Computer Graphics");
+//        new_course.PrintCourses();
     }
 }
