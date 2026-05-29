@@ -1,9 +1,5 @@
 import models.Admin;
 import models.Student;
-import storage.CoursesRepo;
-import storage.StudentsRepo;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -33,12 +29,5 @@ public class Main {
         }else{
             System.out.println("Invalid choice");
         }
-
-
-        //method for adding courses and displaying courses.
-//        CoursesRepo new_course=new CoursesRepo();
-//        new_course.addCourse("CS209","Number Theory");
-//        new_course.addCourse("CS200","Computer Graphics");
-//        new_course.PrintCourses();
     }
 }
