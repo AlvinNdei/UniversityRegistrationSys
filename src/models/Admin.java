@@ -1,7 +1,5 @@
 package models;
 
-import storage.CoursesRepo;
-
 import java.util.Scanner;
 
 public class Admin {
@@ -15,15 +13,36 @@ public class Admin {
         System.out.println("4.Delete a Student");
         System.out.println("5.Assign Course to a Lecturer");
         System.out.println("6.Enroll a student");
-        System.out.println("7.Logout");
+        System.out.println("7.View Staff list");
+        System.out.println("8.Add a Lecturer");
+        System.out.println("9.Logout");
         int operation=input.nextInt();
         if (operation==1){
-            //calling an already defined method since a method cannot exist inside an if statement.
+            //creating a method to access the student class methods.
             Student new_student=new Student();
             new_student.addStudent();
         }else if (operation==2){
+            //creating a method to access the course class methods.
             Course new_course=new Course();
             new_course.addCourse();
+        }else if (operation==3){
+            System.out.println("Editing a course coming soon");
+        }else if (operation==4){
+            System.out.println("Deleting a student coming soon");
+        }else if (operation==5){
+            System.out.println("Assigning a lecturer to a course coming soon");
+        }else if (operation==6){
+            System.out.println("Enrolling a student to a course coming soon");
+        }else if (operation==7){
+            Lecturer staff=new Lecturer();
+            staff.printStaff();
+        }else if (operation==8){
+            Lecturer add_lecturer=new Lecturer();
+            add_lecturer.addLecturer();
+        }else if (operation==9){
+            System.out.println("You are logged out");
+        }else{
+            System.out.println("Invalid choice Please choose a valid choice!!");
         }
     }
 }

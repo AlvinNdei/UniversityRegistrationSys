@@ -18,7 +18,7 @@ public class Main {
         }else if(choice==2){
             System.out.println("Enter the password");
             String password=login.next();
-            String PASSWORD="alvin0325";
+            String PASSWORD="1234";
             if(password.equals(PASSWORD)){
                 Admin showPanel=new Admin();
                 showPanel.adminPanel();
