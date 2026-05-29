@@ -1,5 +1,7 @@
 package models;
 
+import storage.StudentsRepo;
+
 import java.util.Scanner;
 
 public class Admin {
@@ -12,10 +14,11 @@ public class Admin {
         System.out.println("3.Edit a course");
         System.out.println("4.Delete a Student");
         System.out.println("5.Assign Course to a Lecturer");
-        System.out.println("6.Enroll a student");
+        System.out.println("6.Enroll a student to a course");
         System.out.println("7.View Staff list");
         System.out.println("8.Add a Lecturer");
-        System.out.println("9.Logout");
+        System.out.println("9.View Students List");
+        System.out.println("10.Logout");
         int operation=input.nextInt();
         if (operation==1){
             //creating a method to access the student class methods.
@@ -40,6 +43,9 @@ public class Admin {
             Lecturer add_lecturer=new Lecturer();
             add_lecturer.addLecturer();
         }else if (operation==9){
+            StudentsRepo students=new StudentsRepo();
+            students.displayStudents();
+        }else if (operation==10){
             System.out.println("You are logged out");
         }else{
             System.out.println("Invalid choice Please choose a valid choice!!");
