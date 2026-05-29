@@ -1,3 +1,4 @@
+import models.Student;
 import storage.CoursesRepo;
 import storage.StudentsRepo;
 import java.util.HashMap;
@@ -14,7 +15,9 @@ public class Main {
         Scanner login= new Scanner(System.in);
         int choice =login.nextInt();
         if (choice==1){
-            System.out.println("Redirect to the student dashboard");
+            Student studentPanel=new Student();
+            studentPanel.displayCourses();
+
         }else if(choice==2){
             System.out.println("Enter the password");
             String password=login.next();
@@ -28,19 +31,20 @@ public class Main {
         }else{
             System.out.println("Invalid choice");
         }
-//        //An object for adding new students.
-//        StudentsRepo new_students = new StudentsRepo();
-//        Scanner scanner=new Scanner(System.in);
-//        System.out.println("Input your name: ");
-//        String name=scanner.next();
-//        System.out.println("Input your registration number: ");
-//        String reg_no=scanner.next();
-//        new_students.addStudents(name,reg_no);
-//        new_students.displayStudents();
-//
-//        //method for adding courses and displaying courses.
-//        CoursesRepo new_course=new CoursesRepo();
-//        new_course.addCourse("CS203","Number Theory");
-//        new_course.PrintCourses();
+        //An object for adding new students.
+        StudentsRepo new_students = new StudentsRepo();
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Input your name: ");
+        String name=scanner.next();
+        System.out.println("Input your registration number: ");
+        String reg_no=scanner.next();
+        new_students.addStudents(name,reg_no);
+        new_students.displayStudents();
+
+        //method for adding courses and displaying courses.
+        CoursesRepo new_course=new CoursesRepo();
+        new_course.addCourse("CS203","Number Theory");
+        new_course.addCourse("CS201","Computer Graphics");
+        new_course.PrintCourses();
     }
 }

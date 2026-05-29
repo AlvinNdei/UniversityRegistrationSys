@@ -11,6 +11,9 @@ public class CoursesRepo {
     //a method to add new courses.
     public void addCourse(String code,String name){
         this.courses.put(code,name);
+
+        //let's add a few default courses
+
     }
     //a method to display the courses available.
     public void PrintCourses(){
