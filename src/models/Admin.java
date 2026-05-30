@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Admin {
     public void adminPanel(){
+        //needs to be refactored
         Scanner input=new Scanner(System.in);
 
         System.out.println("Choose your operation");
