@@ -6,7 +6,7 @@ import storage.CoursesRepo;
 import java.util.Scanner;
 
 public class Student {
-    public Student(String userName) {
+    public Student() {
     }
 
     public void displayCourses(){

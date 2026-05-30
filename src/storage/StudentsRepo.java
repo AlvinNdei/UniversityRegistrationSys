@@ -5,18 +5,15 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class StudentsRepo {
-    HashMap<String,String> studentsInfo=new HashMap<String,String>();
+    private final static Map<String,String> students=new HashMap<String,String>();
 
     //where we store our passwords locally
-    StudentsRepo(){
-        studentsInfo.put("Janice","1234");
-        studentsInfo.put("Ashley","5678");
-        studentsInfo.put("Angel","9123");
-        studentsInfo.put("Sasha","4567");
-        studentsInfo.put("Martin","8901");
-    }
-    public HashMap getLoginInfo(){
-        return logininfo;
+    static{
+        students.put("Janice","1234");
+        students.put("Ashley","5678");
+        students.put("Angel","9123");
+        students.put("Sasha","4567");
+        students.put("Martin","8901");
     }
     public void displayStudents(){
 
