@@ -73,6 +73,14 @@ public class LoginPage implements ActionListener {
 
                     Student welcome=new Student(userName);
                 }
+                else{
+                    messageLabel.setForeground(Color.red);
+                    messageLabel.setText("Wrong password");
+                }
+            }
+            else{
+                messageLabel.setForeground(Color.red);
+                messageLabel.setText("Username not found");
             }
         }
         }
