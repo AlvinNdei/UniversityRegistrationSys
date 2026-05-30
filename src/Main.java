@@ -3,7 +3,6 @@ import models.Student;
 import storage.StudentsRepo;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
@@ -58,9 +57,9 @@ public class Main implements ActionListener {
         frame.setLayout(null);
         frame.setVisible(true);
     }
-    public static void main(String[]args){;
+    public static void main(String[]args){
         new Main();
-        // Welcome message
+        //Yet to be implemented.
         Scanner login= new Scanner(System.in);
         int choice =login.nextInt();
         if (choice==1){

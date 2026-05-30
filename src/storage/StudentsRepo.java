@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class StudentsRepo {
-    private final static Map<String,String> students=new HashMap<String,String>();
+    private final static Map<String,String> students=new HashMap<>();
 
     //where we store our passwords locally
     static{
