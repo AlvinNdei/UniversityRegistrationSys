@@ -15,6 +15,11 @@ public class StudentsRepo {
         students.put("Sasha","4567");
         students.put("Martin","8901");
     }
+
+    public static boolean verifyLogin(String username,String password){
+        return students.containsKey(username)&&
+                students.get(username).equals(password);
+    }
     public void displayStudents(){
 
         System.out.println(students);
