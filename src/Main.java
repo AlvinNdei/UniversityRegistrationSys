@@ -11,11 +11,13 @@ import java.util.Scanner;
 public class Main implements ActionListener {
     JFrame frame;
     JButton loginButton;
+    JButton resetButton;
     JTextField userNameField;
     JPasswordField userPasswordField;
     public Main(){
         frame=new JFrame();
         loginButton=new JButton("LogIn");
+        resetButton=new JButton("Reset");
         userNameField = new JTextField();
         userPasswordField = new JPasswordField();
 
@@ -37,6 +39,11 @@ public class Main implements ActionListener {
         loginButton.setFocusable(false);
         loginButton.addActionListener(this);
 
+        resetButton.setBounds(225,200,100,25);
+        resetButton.setFocusable(false);
+        resetButton.addActionListener(this);
+
+
 
         frame.setTitle("UniversityRegSys");
         frame.add(welcomeLabel);
@@ -45,6 +52,7 @@ public class Main implements ActionListener {
         frame.add(userNameField);
         frame.add(userPasswordField);
         frame.add(loginButton);
+        frame.add(resetButton);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1920,1080);
         frame.setLayout(null);
@@ -77,13 +85,20 @@ public class Main implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String username=userNameField.getText();
-        String password=new String(userPasswordField.getPassword());
-
-        if (StudentsRepo.verifyLogin(username,password)){
-            JOptionPane.showMessageDialog(null,"Login successful! Welcome" + username +"!");
-        }else {
-            JOptionPane.showMessageDialog(null,"Invalid username or password.","Login Failed",JOptionPane.ERROR_MESSAGE);
+        if(e.getSource()==resetButton) {
+            userNameField.setText("");
+            userPasswordField.setText("");
         }
+        if (e.getSource()==loginButton){
+            String username=userNameField.getText();
+            String password=new String(userPasswordField.getPassword());
+
+            if (StudentsRepo.verifyLogin(username,password)){
+                JOptionPane.showMessageDialog(null,"Login successful! Welcome" + username +"!");
+            }else {
+                JOptionPane.showMessageDialog(null,"Invalid username or password.","Login Failed",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
     }
 }
