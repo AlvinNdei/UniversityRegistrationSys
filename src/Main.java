@@ -13,31 +13,52 @@ public class Main implements ActionListener {
     JButton button;
     public Main(){
         JFrame frame=new JFrame();
-        JButton button=new JButton("LogIN");
-        button.addActionListener(this);
+        JButton loginButton=new JButton("LogIn");
+        JTextField userNameField = new JTextField();
+        JTextField userPasswordField = new JTextField();
+        JLabel userNameLabel = new JLabel("userID:");
+        JLabel userPasswordLabel = new JLabel("Password:");
+
+        userNameLabel.setBounds(50,100,75,25);
+        userPasswordLabel.setBounds(50,150,75,25);
+
+
+        userNameField.setBounds(125,100,200,25);
+        userPasswordField.setBounds(125,150,200,25);
+
+
+
+
+        loginButton.addActionListener(this);
 
         JLabel label= new JLabel("WELCOME TO THE UNIVERSITY REGISTRATION SYSTEM");
 
 
         JPanel panel=new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(30,30,10,30));
-        panel.setLayout(new GridLayout(0,1));
+
+
         panel.add(label);
-        panel.add(button);
+        panel.add(loginButton);
+
+        loginButton.setBounds(125,200,100,25);
+        loginButton.setFocusable(false);
 
 
-        frame.add(panel,BorderLayout.CENTER);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("UniversityRegSys");
+        frame.add(userNameLabel);
+        frame.add(userPasswordLabel);
+        frame.add(userNameField);
+        frame.add(userPasswordField);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(420,420);
         frame.pack();
+        frame.setLayout(null);
         frame.setVisible(true);
     }
     public static void main(String[]args){;
         new Main();
-// Welcome message
-        System.out.println("Choose your role");
-        System.out.println("1.Student");
-        System.out.println("2.Admin");
+        // Welcome message
         Scanner login= new Scanner(System.in);
         int choice =login.nextInt();
         if (choice==1){
