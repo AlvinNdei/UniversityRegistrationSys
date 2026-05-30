@@ -1,10 +1,21 @@
 import models.Admin;
 import models.Student;
+
+//import javax.swing.*;
+//import java.awt.*;
 import java.util.Scanner;
 
 public class Main{
     public static void main(String[]args){
-        //Welcome message
+//        JFrame frame=new JFrame();
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setSize(new Dimension(420,420));
+//        frame.setTitle("UNR system");
+//
+//        frame.setLayout(new BorderLayout());
+//        frame.add(new JButton("Login"));
+//        frame.setVisible(true);
+// Welcome message
         System.out.println("WELCOME TO THE UNIVERSITY REGISTRATION SYSTEM");
         System.out.println("Choose your role");
         System.out.println("1.Student");
