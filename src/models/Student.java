@@ -6,6 +6,9 @@ import storage.CoursesRepo;
 import java.util.Scanner;
 
 public class Student {
+    public Student(String userName) {
+    }
+
     public void displayCourses(){
         System.out.println("Here are the available courses");
 
