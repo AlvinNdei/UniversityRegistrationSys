@@ -1,22 +1,40 @@
 import models.Admin;
 import models.Student;
 
-//import javax.swing.*;
-//import java.awt.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[]args){
-//        JFrame frame=new JFrame();
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setSize(new Dimension(420,420));
-//        frame.setTitle("UNR system");
-//
-//        frame.setLayout(new BorderLayout());
-//        frame.add(new JButton("Login"));
-//        frame.setVisible(true);
+public class Main implements ActionListener {
+    JFrame frame;
+    JPanel panel;
+    JButton button;
+    public Main(){
+        JFrame frame=new JFrame();
+        JButton button=new JButton("LogIN");
+        button.addActionListener(this);
+
+        JLabel label= new JLabel("WELCOME TO THE UNIVERSITY REGISTRATION SYSTEM");
+
+
+        JPanel panel=new JPanel();
+        panel.setBorder(BorderFactory.createEmptyBorder(30,30,10,30));
+        panel.setLayout(new GridLayout(0,1));
+        panel.add(label);
+        panel.add(button);
+
+
+        frame.add(panel,BorderLayout.CENTER);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("UniversityRegSys");
+        frame.pack();
+        frame.setVisible(true);
+    }
+    public static void main(String[]args){;
+        new Main();
 // Welcome message
-        System.out.println("WELCOME TO THE UNIVERSITY REGISTRATION SYSTEM");
         System.out.println("Choose your role");
         System.out.println("1.Student");
         System.out.println("2.Admin");
@@ -40,5 +58,10 @@ public class Main{
         }else{
             System.out.println("Invalid choice");
         }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
