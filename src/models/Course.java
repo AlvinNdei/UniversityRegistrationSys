@@ -9,11 +9,11 @@ public class Course {
 
     private static HashMap<String,String>courses= new HashMap<>();
    static {
-       courses.put("ICS200", "Electronics");
-       courses.put("ICS201", "Databases");
-       courses.put("ICS202", "Operating sys");
-       courses.put("ICS203", "Physics");
-       courses.put("ICS203", "Algebra");
+       courses.put("ICS200", "Electronics-ICS200");
+       courses.put("ICS201", "Databases-ICS201");
+       courses.put("ICS202", "Operating sys-ICS202");
+       courses.put("ICS203", "Physics-ICS203");
+       courses.put("ICS204", "Algebra-ICS204");
    }
     JFrame frame;
     JLabel label;
@@ -29,6 +29,7 @@ public class Course {
         JList<String>list=new JList<>(values);
         JScrollPane scrollPane = new JScrollPane(list);
         scrollPane.setBounds(50, 60, 150, 150);
+        list.setBackground(new Color(212,228,253));
 
         label=new JLabel("Welcome to the courses page!!");
         label.setBounds(0,0,1920,50);

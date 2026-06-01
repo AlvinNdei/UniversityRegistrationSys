@@ -34,7 +34,7 @@ public class Student implements ActionListener {
         panel1.setPreferredSize(new Dimension(150,100));
 
         JPanel panel2=new JPanel();
-        panel2.setBackground(new Color(124,80,26));
+        panel2.setBackground(new Color(27,185,238));
         panel2.setPreferredSize(new Dimension(100,100));
 
         //buttons for the panel
