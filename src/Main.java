@@ -93,7 +93,8 @@ public class Main implements ActionListener {
             String password=new String(userPasswordField.getPassword());
 
             if (StudentsRepo.verifyLogin(username,password)){
-                JOptionPane.showMessageDialog(null,"Login successful! Welcome" + username +"!");
+                frame.dispose();
+                Student student= new Student();
             }else {
                 JOptionPane.showMessageDialog(null,"Invalid username or password.","Login Failed",JOptionPane.ERROR_MESSAGE);
             }

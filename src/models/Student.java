@@ -3,10 +3,22 @@ package models;
 import storage.CoursesRepo;
 
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.Scanner;
 
 public class Student {
-    public Student() {
+    JFrame frame=new JFrame();
+    JLabel label=new JLabel("Hello folks");
+    public Student(){
+        label.setBounds(0,0,100,50);
+        label.setFont(new Font(null,Font.PLAIN,25));
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(label);
+        frame.setSize(1920,1080);
+        frame.setVisible(true);
+        frame.setLayout(null);
     }
 
     public void displayCourses(){
