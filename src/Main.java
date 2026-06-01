@@ -1,11 +1,9 @@
-import models.Admin;
 import models.Student;
 import storage.StudentsRepo;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
 
 public class Main implements ActionListener {
     JFrame frame;
@@ -44,7 +42,7 @@ public class Main implements ActionListener {
 
 
 
-        frame.setTitle("UniversityRegSys");
+        frame.setTitle("UniversityRegistrationSystem");
         frame.add(welcomeLabel);
         frame.add(userNameLabel);
         frame.add(userPasswordLabel);

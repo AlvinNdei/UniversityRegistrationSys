@@ -9,24 +9,35 @@ import java.util.Scanner;
 
 public class Student {
     JFrame frame=new JFrame();
-    JLabel label=new JLabel("Hello folks");
+    JLabel label=new JLabel("Welcome!! Here are the available courses");
+
     public Student(){
         label.setBounds(0,0,100,50);
         label.setFont(new Font(null,Font.PLAIN,25));
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(label);
         frame.setSize(1920,1080);
         frame.setVisible(true);
-        frame.setLayout(null);
+        frame.setLayout(new BorderLayout());
+
+        JPanel panel1=new JPanel();
+
+
+        panel1.setBackground(Color.GRAY);
+
+        panel1.setPreferredSize(new Dimension(100,150));
+
+        frame.add(panel1,BorderLayout.WEST);
+        frame.add(label);
+
     }
 
-    public void displayCourses(){
-        System.out.println("Here are the available courses");
-
-        CoursesRepo displayCourses=new CoursesRepo();
-        displayCourses.PrintCourses();
-    }
+//    public void displayCourses(){
+//        System.out.println("Here are the available courses");
+//
+//        CoursesRepo displayCourses=new CoursesRepo();
+//        displayCourses.PrintCourses();
+//    }
     public void addStudent(){
         System.out.println("Do you want to add a student? y/n");
         Scanner scanner=new Scanner(System.in);
