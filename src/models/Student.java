@@ -5,15 +5,24 @@ import storage.CoursesRepo;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
 
-public class Student {
+public class Student implements ActionListener {
     JFrame frame=new JFrame();
-    JLabel label=new JLabel("Welcome!! Here are the available courses");
+    JLabel label1=new JLabel("Welcome to your dashboard!!");
+    JButton button1=new JButton("Display Courses");
+    JButton button2=new JButton("Reg. for a Course");
+    JButton button3=new JButton("View Classes");
+    JButton button4=new JButton("LogOut");
+
+
 
     public Student(){
-        label.setBounds(0,0,100,50);
-        label.setFont(new Font(null,Font.PLAIN,25));
+        label1.setBounds(0,0,100,50);
+        label1.setFont(new Font(null,Font.PLAIN,25));
+        label1.setVerticalAlignment(JLabel.TOP);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1920,1080);
@@ -21,14 +30,34 @@ public class Student {
         frame.setLayout(new BorderLayout());
 
         JPanel panel1=new JPanel();
-
-
         panel1.setBackground(Color.GRAY);
+        panel1.setPreferredSize(new Dimension(150,100));
 
-        panel1.setPreferredSize(new Dimension(100,150));
+        //buttons for the panel
+        button1.setBounds(0,180,100,50);
+        button1.setFocusable(false);
+        button1.addActionListener(this);
+
+        button2.setBounds(0,180,100,50);
+        button2.setFocusable(false);
+        button2.addActionListener(this);
+
+        button3.setBounds(0,230,100,50);
+        button3.setFocusable(false);
+        button3.addActionListener(this);
+
+        button4.setBounds(0,280,100,50);
+        button4.setFocusable(false);
+        button4.addActionListener(this);
+
+        panel1.add(button1);
+        panel1.add(button2);
+        panel1.add(button3);
+        panel1.add(button4);
+
 
         frame.add(panel1,BorderLayout.WEST);
-        frame.add(label);
+        frame.add(label1);
 
     }
 
@@ -61,6 +90,13 @@ public class Student {
             System.out.println("Okay you may proceed");
         }else{
             System.out.println("Invalid choice");
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==button1){
+            System.out.println("Displaying courses");
         }
     }
 }
