@@ -2,6 +2,7 @@ import models.Student;
 import storage.StudentsRepo;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,14 +19,18 @@ public class Main implements ActionListener {
         userNameField = new JTextField();
         userPasswordField = new JPasswordField();
 
+
         JLabel userNameLabel = new JLabel("userID:");
         JLabel userPasswordLabel = new JLabel("Password:");
         JLabel welcomeLabel= new JLabel("WELCOME TO THE UNIVERSITY REGISTRATION SYSTEM");
 
         welcomeLabel.setBounds(50,50,800,25);
+        welcomeLabel.setForeground(Color.BLACK);
 
         userNameLabel.setBounds(50,100,75,25);
+        userNameLabel.setForeground(Color.BLACK);
         userPasswordLabel.setBounds(50,150,75,25);
+        userPasswordLabel.setForeground(Color.BLACK);
 
 
         userNameField.setBounds(125,100,200,25);
@@ -50,9 +55,10 @@ public class Main implements ActionListener {
         frame.add(userPasswordField);
         frame.add(loginButton);
         frame.add(resetButton);
+        frame.setLayout(null);
+        frame.getContentPane().setBackground(new Color(2,0,108));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1920,1080);
-        frame.setLayout(null);
         frame.setVisible(true);
     }
     public static void main(String[]args){
