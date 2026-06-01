@@ -33,6 +33,10 @@ public class Student implements ActionListener {
         panel1.setBackground(new Color(1,0,72));
         panel1.setPreferredSize(new Dimension(150,100));
 
+        JPanel panel2=new JPanel();
+        panel2.setBackground(new Color(124,80,26));
+        panel2.setPreferredSize(new Dimension(100,100));
+
         //buttons for the panel
         button1.setBounds(0,180,100,50);
         button1.setFocusable(false);
@@ -58,6 +62,7 @@ public class Student implements ActionListener {
 
         frame.add(panel1,BorderLayout.WEST);
         frame.add(label1);
+        frame.add(panel2,BorderLayout.CENTER);
 
     }
 
