@@ -96,7 +96,8 @@ public class Student implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button1){
-            System.out.println("Displaying courses");
+            frame.dispose();
+            Course courses=new Course();
         }
     }
 }

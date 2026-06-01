@@ -1,4 +1,6 @@
 package storage;
+import javax.swing.*;
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -6,10 +8,6 @@ public class CoursesRepo {
     //a map to hold courses with their code.
     private final Map<String,String> courses=new HashMap<>();
 
-    //a method to add new courses.
-    public void addCourse(String code,String name){
-        this.courses.put(code,name);
-    }
     //a method to display the courses available.
     public void PrintCourses(){
         //default courses.
