@@ -2,6 +2,7 @@ package models;
 
 
 
+import app.Main;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,7 +13,7 @@ public class Student implements ActionListener {
     JLabel label1=new JLabel("Welcome to your dashboard!!");
     JButton button1=new JButton("Display Courses");
     JButton button2=new JButton("Reg. for a Course");
-    JButton button3=new JButton("View Classes");
+    JButton button3=new JButton("Calculate GPA");
     JButton button4=new JButton("LogOut");
 
 
@@ -68,6 +69,12 @@ public class Student implements ActionListener {
         if (e.getSource()==button1){
             frame.dispose();
             Course courses=new Course();
+        }
+
+        if (e.getSource() == button4) {
+            frame.dispose();
+
+            new Main();
         }
     }
 }

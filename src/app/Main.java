@@ -1,3 +1,5 @@
+package app;
+
 import models.Student;
 import storage.StudentsRepo;
 
@@ -56,7 +58,7 @@ public class Main implements ActionListener {
         frame.add(loginButton);
         frame.add(resetButton);
         frame.setLayout(null);
-        frame.getContentPane().setBackground(new Color(2,0,108));
+        frame.getContentPane().setBackground(new Color(177,183,193));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1920,1080);
         frame.setVisible(true);
@@ -79,6 +81,7 @@ public class Main implements ActionListener {
             if (StudentsRepo.verifyLogin(username,password)){
                 frame.dispose();
                 Student student= new Student();
+                JOptionPane.showMessageDialog(null,"Welcome back "+username +"!");
             }else {
                 JOptionPane.showMessageDialog(null,"Invalid username or password.","Login Failed",JOptionPane.ERROR_MESSAGE);
             }
