@@ -2,7 +2,7 @@
 
 
 # UNIVERSITY REGISTRATION SYSTEM 
-A registration system but no database is used and no frameworks. It is a pure java System.
+A registration system but no database is used and no frameworks. It is a pure java System. Practice java GUI with Swing.
 
 
 ##  Features
