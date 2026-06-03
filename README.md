@@ -33,5 +33,5 @@ Contributions are welcome! Please open an issue or submit a pull request.
 4. Push to the Branch 
 5. Open a Pull Request
 
-## 📄 License
+## License
 Distributed under the MIT License.
