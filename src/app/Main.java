@@ -15,21 +15,27 @@ public class Main implements ActionListener {
     JTextField userNameField;
     JPasswordField userPasswordField;
     ImageIcon icon;
+    JPanel panel1;
     public Main(){
         frame=new JFrame();
+        frame.setLayout(new BorderLayout());
+        panel1=new JPanel();
         loginButton=new JButton("LogIn");
         resetButton=new JButton("Reset");
-        userNameField = new JTextField();
-        userPasswordField = new JPasswordField();
+        userNameField = new JTextField(15);
+        userPasswordField = new JPasswordField(15);
         icon=new ImageIcon("src/school.png");
 
+        panel1.setLayout(new GridBagLayout());
 
 
-        JLabel userNameLabel = new JLabel("userID:");
+
+        JLabel userNameLabel = new JLabel("userName:");
         JLabel userPasswordLabel = new JLabel("Password:");
         JLabel welcomeLabel= new JLabel("WELCOME TO THE UNIVERSITY REGISTRATION SYSTEM");
 
-        welcomeLabel.setBounds(50,50,800,25);
+        welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
+
         welcomeLabel.setForeground(Color.BLACK);
 
         userNameLabel.setBounds(50,100,75,25);
@@ -54,17 +60,23 @@ public class Main implements ActionListener {
 
         frame.setTitle("UniversityRegistrationSystem");
         frame.setIconImage(icon.getImage());
-        frame.add(welcomeLabel);
-        frame.add(userNameLabel);
-        frame.add(userPasswordLabel);
-        frame.add(userNameField);
-        frame.add(userPasswordField);
-        frame.add(loginButton);
-        frame.add(resetButton);
-        frame.setLayout(null);
+        frame.add(welcomeLabel, BorderLayout.NORTH);
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(8, 10, 8, 10);
+
+        gbc.gridx = 0; gbc.gridy = 0; panel1.add(userNameLabel, gbc);
+        gbc.gridx = 1; gbc.gridy = 0; panel1.add(userPasswordLabel, gbc);
+        gbc.gridx = 0; gbc.gridy = 1; panel1.add(userNameField, gbc);
+        gbc.gridx = 1; gbc.gridy = 1; panel1.add(userPasswordField, gbc);
+        gbc.gridx = 0; gbc.gridy = 2; panel1.add(loginButton, gbc);
+        gbc.gridx = 1; gbc.gridy = 2; panel1.add(resetButton, gbc);
+        frame.add(panel1,BorderLayout.CENTER);
+
         frame.getContentPane().setBackground(new Color(177,183,193));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1920,1080);
+        frame.setSize(600,300);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
     public static void main(String[]args){
