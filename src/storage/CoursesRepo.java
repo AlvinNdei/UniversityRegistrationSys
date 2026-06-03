@@ -20,10 +20,10 @@ public class CoursesRepo {
     JFrame frame=new JFrame();
     JLabel label=new JLabel();
     JLabel label1=new JLabel();
-//    JOptionPane pane1=new JOptionPane();
     public  CoursesRepo(){
-        frame.setSize(1920,1080);
+        frame.setSize(600,400);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(new Color(177,183,193));

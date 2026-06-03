@@ -20,10 +20,10 @@ public class Course {
     public Course(){
         frame=new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1920,1080);
+        frame.setSize(600,400);
         frame.setVisible(true);
         frame.setLayout(null);
-        frame.getContentPane().setBackground(new Color(9,0,136));
+        frame.getContentPane().setBackground(new Color(177,183,193));
 
         String[] values=courses.values().toArray(new String[0]);
         JList<String>list=new JList<>(values);
@@ -41,6 +41,7 @@ public class Course {
         frame.add(label);
         frame.add(scrollPane);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
 
 
 

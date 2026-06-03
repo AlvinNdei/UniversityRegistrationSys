@@ -26,8 +26,9 @@ public class Student implements ActionListener {
         label1.setVerticalAlignment(JLabel.TOP);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1920,1080);
+        frame.setSize(600,400);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
         frame.setLayout(new BorderLayout());
 
         JPanel panel1=new JPanel();
@@ -35,7 +36,7 @@ public class Student implements ActionListener {
         panel1.setPreferredSize(new Dimension(150,100));
 
         JPanel panel2=new JPanel();
-        panel2.setBackground(new Color(27,185,238));
+        panel2.setBackground(new Color(177,183,193));
         panel2.setPreferredSize(new Dimension(100,100));
 
         //buttons for the panel
