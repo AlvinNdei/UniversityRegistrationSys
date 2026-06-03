@@ -64,10 +64,11 @@ public class Main implements ActionListener {
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(8, 10, 8, 10);
+//GridBagLayout lets us place each component in a specific cell using (column(gridx), row(gridy))
 
         gbc.gridx = 0; gbc.gridy = 0; panel1.add(userNameLabel, gbc);
-        gbc.gridx = 1; gbc.gridy = 0; panel1.add(userPasswordLabel, gbc);
-        gbc.gridx = 0; gbc.gridy = 1; panel1.add(userNameField, gbc);
+        gbc.gridx = 0; gbc.gridy = 1; panel1.add(userPasswordLabel, gbc);
+        gbc.gridx = 1; gbc.gridy = 0; panel1.add(userNameField, gbc);
         gbc.gridx = 1; gbc.gridy = 1; panel1.add(userPasswordField, gbc);
         gbc.gridx = 0; gbc.gridy = 2; panel1.add(loginButton, gbc);
         gbc.gridx = 1; gbc.gridy = 2; panel1.add(resetButton, gbc);
