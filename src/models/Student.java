@@ -3,6 +3,8 @@ package models;
 
 
 import app.Main;
+import storage.CoursesRepo;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -68,12 +70,15 @@ public class Student implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button1){
             frame.dispose();
-            Course courses=new Course();
+            new Course();
         }
-
+        if (e.getSource()==button2){
+            frame.dispose();
+            new CoursesRepo();
+        }
+        //handles our logout request
         if (e.getSource() == button4) {
             frame.dispose();
-
             new Main();
         }
     }

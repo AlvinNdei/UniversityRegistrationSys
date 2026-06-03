@@ -80,7 +80,7 @@ public class Main implements ActionListener {
 
             if (StudentsRepo.verifyLogin(username,password)){
                 frame.dispose();
-                Student student= new Student();
+                new Student();
                 JOptionPane.showMessageDialog(null,"Welcome back "+username +"!");
             }else {
                 JOptionPane.showMessageDialog(null,"Invalid username or password.","Login Failed",JOptionPane.ERROR_MESSAGE);
