@@ -26,6 +26,7 @@ public class CoursesRepo {
         frame.setVisible(true);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setBackground(new Color(177,183,193));
 
 
         label.setText("Hello welcome to the course registration!!");
@@ -36,9 +37,17 @@ public class CoursesRepo {
         if(name==null){
             return;
         }else if(courses.containsKey(name)){
-            JOptionPane.showMessageDialog(null,"Course Found\nCourse code " + courses.get(name));
+            String course=courses.get(name);
+            JOptionPane.showMessageDialog(null,"Course Found\nCourse code " + course);
+            String stdname=JOptionPane.showInputDialog(null,"Enter Your name");
+            JOptionPane.showMessageDialog(null,"You have been registered for: "
+                    + course +" Thank you " +stdname+"! for registering with us.");
+            JOptionPane.showMessageDialog(null,"Press OK to exit the page");
+            frame.dispose();
         }else{
             JOptionPane.showMessageDialog(null,"Course not Found! Available courses are: " + courses);
+            JOptionPane.showMessageDialog(null,"Press OK to exit the page");
+            frame.dispose();
         }
         frame.add(label);
         frame.add(label1);
