@@ -14,12 +14,15 @@ public class Main implements ActionListener {
     JButton resetButton;
     JTextField userNameField;
     JPasswordField userPasswordField;
+    ImageIcon icon;
     public Main(){
         frame=new JFrame();
         loginButton=new JButton("LogIn");
         resetButton=new JButton("Reset");
         userNameField = new JTextField();
         userPasswordField = new JPasswordField();
+        icon=new ImageIcon("src/school.png");
+
 
 
         JLabel userNameLabel = new JLabel("userID:");
@@ -50,6 +53,7 @@ public class Main implements ActionListener {
 
 
         frame.setTitle("UniversityRegistrationSystem");
+        frame.setIconImage(icon.getImage());
         frame.add(welcomeLabel);
         frame.add(userNameLabel);
         frame.add(userPasswordLabel);
